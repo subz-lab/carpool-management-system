@@ -1,22 +1,15 @@
+//index.php
 
 <?php include 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<style>
-body {
-  background-image: url('https://i.pinimg.com/474x/0d/a7/1a/0da71a71df35ead9b70a8927925068fe.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poolmate - Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-image: url('https://i.pinimg.com/474x/0d/a7/1a/0da71a71df35ead9b70a8927925068fe.jpg');">
+<body>
   <header>
     <nav>
       <div class="logo">
@@ -33,15 +26,17 @@ body {
     </nav>
   </header>
 
-  <main style="text-align: center;color: white;">
+  <main>
     <section class="hero">
-      <h1 style="text-align: center;">Welcome to Poolmate</h1>
-      <p style="text-align: center;"  >Your smart solution for carpooling. Save money, reduce traffic, and help the environment.</p><br><br>
-      <a style="text-align: center;" href="register.php" class="btn" >Join Now</a>
+      <h1>Welcome to Poolmate</h1>
+      <p>Your smart solution for carpooling. Save money, reduce traffic, and help the environment.</p>
+      <a href="register.php" class="btn">Join Now</a>
     </section>
   </main>
 
- 
+  <footer>
+    <p>&copy; 2025 Poolmate. All rights reserved.</p>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>
