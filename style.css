@@ -1,0 +1,289 @@
+/* Advanced CSS with Custom Properties, Animations, and Global Background Image */
+:root {
+  --primary-color: #ff7f50;
+  --secondary-color: #ff6333;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --header-bg: #333;
+  --header-text: #fff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a full-page background image to all pages */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: url('https://source.unsplash.com/1600x900/?landscape') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color);
+  background-color: #ff6333;
+}
+
+/* Header & Navigation */
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 10px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links li a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Hero Section with New Background Image and Animation */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://i.pinimg.com/474x/0d/a7/1a/0da71a71df35ead9b70a8927925068fe.jpg') no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--header-text);
+  text-align: center;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Buttons with Transitions */
+.btn {
+  background: var(--primary-color);
+  color: var(--header-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  /* Optional: add a subtle background for content areas */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-container form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+/* Info Section */
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  width: 80%;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 45%;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 20px;
+}
+
+/* User Profile Specific Styles */
+.profile-info {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.profile-info p {
+  margin-bottom: 10px;
+}
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.my-rides {
+  margin-top: 30px;
+}
+.my-rides h3 {
+  margin-bottom: 10px;
+}
+.my-rides ul {
+  list-style: none;
+  padding-left: 0;
+}
+.my-rides ul li {
+  background: var(--background-color);
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ride Confirmation Specific Styles */
+.ride-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+}
+.ride-details p {
+  margin-bottom: 10px;
+}
+
+/* Modal Styles for Edit Profile */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: var(--box-shadow);
+}
+.modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-content .close:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
